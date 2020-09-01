@@ -1,0 +1,54 @@
+.profile {
+    background-color: azure;
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 25%;
+    opacity: 80%;
+}
+
+.profileInEditMode {
+    background-color: azure;
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 25%;
+}
+
+.profile:hover {
+    opacity: 100%;
+}
+
+.profileButton {
+    width: 5em;
+    height: 2em;
+    border: 2px solid black;
+    background-color: cyan;
+}
+
+.deleteButton {
+    width: 5em;
+    height: 2em;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.editModeButton {
+    width: 5em;
+    height: 2em;
+    border: 2px solid black;
+    background-color: green;
+}
+
+.saveButton {
+    width: 5em;
+    height: 2em;
+    border: 2px solid black;
+    background-color: green;
+}

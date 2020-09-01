@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "backendtest-7243f"
+  },
+  "targets": {
+    "backendtest-7243f": {
+      "hosting": {
+        "BackEndTest": [
+          "backendtest-7243f"
+        ]
+      }
+    }
+  }
+}

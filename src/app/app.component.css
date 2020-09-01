@@ -1,0 +1,15 @@
+.addProfileButton {
+    background-color: lightcoral;
+    border: 2px solid black;
+    margin: 1em auto auto auto;
+    width: 8%;
+    text-align: center;
+}
+
+.addProfileButton:hover {
+    background-color: coral;
+}
+
+.mainDiv {
+    text-align: center;
+}
