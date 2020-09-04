@@ -6,15 +6,21 @@ import { AngularFireModule } from '@angular/fire';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

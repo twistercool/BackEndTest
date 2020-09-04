@@ -1,0 +1,11 @@
+<div class="mainDiv">
+    <div *ngFor="let profile of (profiles | async); let i = index"> 
+        <app-profile 
+            [profile]="profile"
+            (addLikeEvent)="addLike(profile.uid)"
+            (deleteProfile)="deleteProfile(profile.uid)"
+            (saveEvent)="saveProfile($event, profile.uid)">
+        </app-profile>
+    </div>
+    <button class="addProfileButton" (click)="addNewProfile()">New Profile</button>
+</div>

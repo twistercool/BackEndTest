@@ -28,7 +28,7 @@ export class ProfilesService {
   addProfile() {
     console.log('new profile has been created');
     let newID = this.firestore.createId();
-    return this.firestore.collection('profiles').doc(newID).set({name: '', description:'', uid: newID, image_path: '', total_likes: 0});
+    return this.firestore.collection('profiles').doc(newID).set({name: '', description:'', uid: newID, image_path: "assets/Img/slider_puffin_jpegmini_mobile.jpg", total_likes: 0});
   }
 
   deleteProfile(uid:string) {

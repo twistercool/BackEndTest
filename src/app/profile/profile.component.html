@@ -2,11 +2,12 @@
 <div class="profile" *ngIf="!editMode; else editModeBlock">
     <p>Name: {{ profile.name }} </p>
     <p>Bio: {{ profile.description }}</p>
-    <img src='{{ profile.image_path }}' alt="Image can't load">
+    <img class="image" src='{{ profile.image_path }}' alt="Image can't load">
     <p>Likes: {{ profile.total_likes }}</p>
     <button class="profileButton" (click)="addLike()">Like</button>
     <button class="deleteButton" (click)="deleteProfile()">Delete</button>
-    <button class="editModeButton" (click)="editMode = !editMode">Edit</button>
+    <button class="editModeButton" (click)="editMode = !editMode">Edit</button><br><br>
+    <button class="expandButton" [routerLink]="profile.uid">Expand</button>
 </div>
 
 <ng-template #editModeBlock>

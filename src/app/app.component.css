@@ -1,15 +1,11 @@
-.addProfileButton {
-    background-color: lightcoral;
-    border: 2px solid black;
-    margin: 1em auto auto auto;
-    width: 8%;
-    text-align: center;
+.navBar {
+    width: auto;
+    background-color: hotpink;
+    padding: 1em;
+    margin: 1em;
 }
 
-.addProfileButton:hover {
-    background-color: coral;
-}
-
-.mainDiv {
-    text-align: center;
+a {
+    color: white;
+    text-decoration: none;
 }

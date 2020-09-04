@@ -1,12 +1,5 @@
-
-
-
-<div class="mainDiv"> 
-  <app-profile *ngFor="let profile of (profiles | async); let i = index"
-      [profile]="profile"
-      (addLikeEvent)="addLike(profile.uid)"
-      (deleteProfile)="deleteProfile(profile.uid)"
-      (saveEvent)="saveProfile($event, profile.uid)">
-  </app-profile>
-  <button class="addProfileButton" (click)="addNewProfile()">New Profile</button>
+<div class="navBar">
+  <a routerLink=''>Home</a>
 </div>
+
+<router-outlet></router-outlet>
