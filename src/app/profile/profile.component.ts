@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Profile } from '../Profile';
+import { Profile } from '../Services/Profile';
 
 @Component({
   selector: 'app-profile',
@@ -35,8 +35,8 @@ export class ProfileComponent implements OnInit {
     return this.deleteEmitter.emit();
   }
 
-  saveChanges(newName:string, newDes:string, newPath:string) {
-    this.saveEmitter.emit([newName, newDes, newPath]);
+  saveChanges(newName:string, newDes:string, newPath:string, newEmail:string) {
+    this.saveEmitter.emit([newName, newDes, newPath, newEmail]);
     this.editMode = false;
   }
 

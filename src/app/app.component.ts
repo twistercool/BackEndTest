@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Profile } from './Services/Profile';
+import { AuthenticationService } from "./Services/authentication.service";
+import { of } from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {
+  constructor(public auth: AuthenticationService) {
   }
 
   ngOnInit() {

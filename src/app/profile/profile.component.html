@@ -5,17 +5,32 @@
     <img class="image" src='{{ profile.image_path }}' alt="Image can't load">
     <p>Likes: {{ profile.total_likes }}</p>
     <button class="profileButton" (click)="addLike()">Like</button>
+
     <button class="deleteButton" (click)="deleteProfile()">Delete</button>
+
     <button class="editModeButton" (click)="editMode = !editMode">Edit</button><br><br>
+    
     <button class="expandButton" [routerLink]="profile.uid">Expand</button>
 </div>
 
 <ng-template #editModeBlock>
     <div class="profileInEditMode">
+        <h1>Edit Mode</h1>
+
+        <label>New Name: </label>
         <input #newName type="text" [value]="profile.name"><br><br>
+
+        <label>New Description: </label>
         <input #newDes type="text" [value]="profile.description"><br><br>
+
+        <label>New Image Path: </label>
         <input #newPath type="text" [value]="profile.image_path"><br><br>
-        <img src='{{ profile.image_path }}' alt="Image can't load"><br><br>
-        <button class="saveButton" (click)="saveChanges(newName.value, newDes.value, newPath.value)">Save</button>       
+
+        <label>New Email: </label>
+        <input #newEmail type="text" [value]="profile.email"><br><br>
+
+        <img class="image" src='{{ profile.image_path }}' alt="Image can't load"><br><br>
+
+        <button class="saveButton" (click)="saveChanges(newName.value, newDes.value, newPath.value, newEmail.value)">Save</button>       
     </div>
 </ng-template>

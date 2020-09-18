@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfilesService } from "src/app/profiles.service";
-import { Profile } from '../Profile';
+import { ProfilesService } from "src/app/Services/profiles.service";
+import { Profile } from '../Services/Profile';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   addNewProfile() {
-    this.service.addProfile();
+    this.service.addEmptyProfile();
   }
 
   deleteProfile(uid:string) {
@@ -33,6 +33,6 @@ export class HomeComponent implements OnInit {
 
   saveProfile(newSaveData:string[], uid:string) {
     //newSaveData has the name, the description and the image path
-    this.service.updateProfile(uid, newSaveData[0], newSaveData[1], newSaveData[2]);
+    this.service.updateProfile(uid, newSaveData[0], newSaveData[1], newSaveData[2], newSaveData[3]);
   }
 }

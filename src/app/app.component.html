@@ -1,5 +1,11 @@
 <div class="navBar">
   <a routerLink=''>Home</a>
+<hr>
+  <a routerLink='login' *ngIf="!auth.isLoggedIn; else isLoggedIn">Login</a>
 </div>
+
+<ng-template #isLoggedIn>
+  <a routerLink='' (click)="auth.goggleSignOut()">Log out</a>
+</ng-template>
 
 <router-outlet></router-outlet>
